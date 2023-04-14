@@ -83,14 +83,14 @@ def grab_data(date):
 
                         # input()
                     except Exception as e:
-                        print(e, index)
+                        print(e, index,url)
                         input()
             except Exception as ee:
-                print(ee, index)
+                print(ee, index,url)
                 input()
 
     except Exception as ee:
-        print(ee)
+        print(ee,url)
         input()
 
     # for the formatting of collected data
@@ -134,7 +134,7 @@ with open('json.json','w') as f:
 initial_date = '01/05/2023'
 # print( save_data_database('10/03/2001',grbdata))
 
-for i in range(731):
+for i in range(500,731):
     date = datetime.datetime.strptime(initial_date, '%d/%m/%Y')
     # date = date + datetime.timedelta(days=i)
     date = datetime.datetime.strftime(
